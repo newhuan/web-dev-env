@@ -27,7 +27,7 @@ now, I can use es6 in the fucking ie6,awesome right?
 
 usage:
 
-'''shell
+```shell
     npm install
     npm run build
-'''
+```
