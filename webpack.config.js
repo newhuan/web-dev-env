@@ -7,10 +7,7 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        index: [
-            'babel-polyfill',
-            './dist/js/index/index.js'
-        ],
+        index: ['babel-polyfill', './dist/js/index/index.js'],
         test: ['babel-polyfill', './dist/js/test/test.js'],
     },
     output: {
@@ -46,7 +43,6 @@ module.exports = {
             {//compile scss
                 test: /\.scss$/,
                 include: __dirname + "\\dist\\css\\",
-                // include: path.resolve(__dirname, '/dist/css'),
                 loader: "style-loader!css-loader!sass-loader"
             },
             {//url-handler
@@ -65,7 +61,7 @@ module.exports = {
         new webpack.ProvidePlugin({//在全局设置$为jquery
             jQuery: "jquery",
             $: "jquery"
-        }),
+            }),
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: true//set false before release
         })

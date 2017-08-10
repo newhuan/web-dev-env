@@ -7,7 +7,8 @@ import "../../css/index/index.scss"
 
 window.DEBUG = CONFIG.DEBUG;
 window.ROOT = CONFIG.ROOT;
-// const  CONFIG = require("")
+window.CONFIG = CONFIG.CONFIG;
+
 let a = new Promise(function (resolve, reject) {
     resolve(1);
 });
