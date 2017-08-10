@@ -3,6 +3,7 @@
  */
 var path = require('path');
 var webpack = require('webpack');
+// var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -54,10 +55,19 @@ module.exports = {
             }
         ]
     },
+    devtool: "source-map",//delete before release
     plugins: [
         new webpack.ProvidePlugin({//在全局设置$为jquery
             jQuery: "jquery",
             $: "jquery"
+            }),
+        new webpack.optimize.UglifyJsPlugin({
+            sourceMap: true//set false before release
         })
+        // new UglifyJSPlugin({
+        //     test: /\.jsx?$/i,
+        //     exclude: /(node_modules|bower_components)/,
+        //     sourceMap: true
+        // })
     ]
 };

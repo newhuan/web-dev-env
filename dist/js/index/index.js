@@ -17,3 +17,4 @@ a.then(function(p){
 var b = 1;
 console.log(b, "223");
 var my = new MT();
+throw "test error";
