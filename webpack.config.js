@@ -1,6 +1,14 @@
 /**
  * Created by newhuan on 2017/6/13.
  */
+//
+/**
+ * webpack-dev-server, uglifyjs-webpack-plugin => not need, can be uninstalled
+*/
+/**
+ * dest floder can be built by webpack, so it is unnecessary to push it, add "\dest" in .gitignore file
+ * however, if the file must be released, dest floder must be pushed;
+*/
 var path = require('path');
 var webpack = require('webpack');
 // var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
