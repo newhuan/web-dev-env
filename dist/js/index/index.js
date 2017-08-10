@@ -15,6 +15,9 @@ a.then(function(p){
     console.log("233", p, "index", $, CONFIG);
 });
 var b = 1;
+if (typeof DEBUG !== "undefined") {
+    console.log("watch me!");
+}
 console.log(b, "223");
 var my = new MT();
 throw "test error";

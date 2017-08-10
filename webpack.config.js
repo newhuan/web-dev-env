@@ -55,12 +55,17 @@ module.exports = {
             }
         ]
     },
+    watch: true,
+    watchOptions: {
+        aggregateTimeout: 300,
+        poll: 1000
+    },
     devtool: "source-map",//delete before release
     plugins: [
         new webpack.ProvidePlugin({//在全局设置$为jquery
             jQuery: "jquery",
             $: "jquery"
-            }),
+        }),
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: true//set false before release
         })
